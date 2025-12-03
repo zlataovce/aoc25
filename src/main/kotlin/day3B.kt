@@ -1,5 +1,5 @@
 fun main() = println(
-    generateSequence(::readLine)
+    generateSequence(::readlnOrNull)
         .map { it.map(Char::digitToInt) }
         .map { ds ->
             ds.fold(emptyList<Int>() to 0) { (s, r), d ->

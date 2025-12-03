@@ -1,5 +1,5 @@
 fun main() = println(
-    generateSequence(::readLine)
+    generateSequence(::readlnOrNull)
         .map { it.first() to it.drop(1).toInt() }
         .fold(50 to 0) { pz, (dir, step) ->
             (1..step).fold(pz) { (pos, zer), _ ->

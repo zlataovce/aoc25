@@ -1,5 +1,5 @@
 fun main() = println(
-    generateSequence(::readLine)
+    generateSequence(::readlnOrNull)
         .map { it.map(Char::digitToInt) }
         .map {
             it.slice(0..<it.lastIndex).max()
